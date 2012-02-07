@@ -27,7 +27,7 @@ hi Visual       ctermbg=white ctermfg=yellow
 " Specials
 hi Todo         ctermfg=white ctermbg=green
 hi Title        ctermfg=white cterm=bold
-hi MatchParen	term=reverse  ctermbg=DarkYellow
+hi MatchParen	term=reverse  ctermbg=DarkRed
 
 " Syntax
 hi Constant     ctermfg=darkyellow
