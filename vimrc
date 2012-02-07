@@ -7,7 +7,6 @@ set ls=2          	" allways show status line
 set tw=78		" textwidth : 78 chars
 
 set autoindent		" auto indentation
-set smartindent     	" smart indent
 set scrolloff=3     	" keep 3 lines when scrolling
 
 " folding
@@ -81,7 +80,7 @@ if has("autocmd")
 	" numbers of spaces of tab character | 4 for C++
 	autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab 
 	autocmd FileType c setlocal tabstop=8 shiftwidth=8
-	autocmd FileType python setlocal ts=4 sw=4 sts=4 et textwidth=0 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+	autocmd FileType python setlocal ts=4 sw=4 sts=4 et textwidth=0 cindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 	let python_no_builtin_highlight=0
 
 	" Autocomplete
