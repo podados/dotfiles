@@ -15,7 +15,7 @@ hi Normal       ctermfg=grey
 hi NonText      ctermfg=grey
 
 " Search
-hi Search       ctermfg=white ctermbg=blue
+hi Search       ctermfg=white ctermbg=darkred
 hi IncSearch    ctermfg=yellow ctermbg=green
 
 " Window Elements
