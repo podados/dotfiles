@@ -5,9 +5,12 @@
 set nocompatible  	" prevents from original vi's bugs & limitations
 set ls=2          	" allways show status line
 set tw=78		" textwidth : 78 chars
+set scrolloff=4     	" keep 3 lines when scrolling
 
 set autoindent		" auto indentation
-set scrolloff=3     	" keep 3 lines when scrolling
+set tabstop=4
+set shiftwidth=4
+set expandtab 
 
 " folding
 set foldmethod=indent
