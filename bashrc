@@ -15,6 +15,13 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+python2="/opt/python2.7/bin"
+python3="/opt/python3.3/bin"
+for d in $python2 $python3;do
+    if [ -d $d ]; then
+        PATH="$d:$PATH"
+    fi
+done
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -92,16 +99,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-python2="/opt/python2.7/bin"
-python3="/opt/python3.3/bin"
-for d in $python2 $python3;do
-    if [ -d $d ]; then
-        PATH="$d:$PATH"
-    fi
-done
-
-# rvm - ruby version manager
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 set -o vi
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
