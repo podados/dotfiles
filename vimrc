@@ -1,5 +1,5 @@
 "
-" ~/.vimrc - brutasse
+" ~/.vimrc
 "
 
 set nocompatible  	" prevents from original vi's bugs & limitations
