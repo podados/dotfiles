@@ -37,7 +37,6 @@ set nobackup        " do not keep a backup file
 "set list	" show tab whith -
 "set listchars=tab:>-,trail:-
 set pastetoggle=<F12>
-set directory=~/.vim/swap,~/tmp
 
 set formatprg=par\ -w78q
 
