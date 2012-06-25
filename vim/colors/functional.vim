@@ -11,22 +11,22 @@ endif
 let colors_name = "functional"
 
 " Default Colors
-hi Normal       ctermfg=black
-hi NonText      ctermfg=black
+hi Normal       ctermfg=grey
+hi NonText      ctermfg=grey
 
 " Search
 hi Search       ctermfg=white ctermbg=darkred
 hi IncSearch    ctermfg=yellow ctermbg=green
 
 " Window Elements
-hi StatusLineNC   ctermfg=white ctermbg=black cterm=bold
+hi StatusLineNC   ctermfg=black ctermbg=grey cterm=bold
 hi StatusLine   ctermfg=white ctermbg=darkblue cterm=bold
 hi Folded       cterm=bold ctermfg=darkmagenta ctermbg=none
 hi Visual       ctermbg=white ctermfg=yellow
 
 " Specials
 hi Todo         ctermfg=white ctermbg=green
-hi Title        ctermfg=black cterm=bold
+hi Title        ctermfg=blue cterm=bold
 hi MatchParen	term=reverse  ctermbg=DarkRed
 
 " Syntax
@@ -34,11 +34,11 @@ hi Constant     ctermfg=darkyellow
 hi Number       ctermfg=darkred
 hi Boolean       ctermfg=darkred
 hi Statement    ctermfg=darkgreen
-hi Identifier   ctermfg=darkred
+hi Identifier   ctermfg=darkred cterm=bold
 hi Function     ctermfg=white ctermbg=green
 hi PreProc      ctermfg=darkgreen
-hi Comment      ctermfg=blue
-hi Type         ctermfg=black cterm=bold
+hi Comment      ctermfg=blue cterm=bold
+hi Type         ctermfg=darkgreen
 hi Special      ctermfg=magenta
 hi Error        ctermfg=white ctermbg=red
 

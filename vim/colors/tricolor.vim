@@ -11,7 +11,7 @@ endif
 let colors_name = "tricolor"
 
 " Default Colors
-hi Normal       ctermfg=grey cterm=bold
+hi Normal       ctermfg=grey
 hi NonText      ctermfg=white
 
 " Search
@@ -19,9 +19,9 @@ hi Search       ctermfg=white ctermbg=blue
 hi IncSearch    ctermfg=yellow ctermbg=green
 
 " Window Elements
-hi StatusLineNC   ctermfg=black ctermbg=grey cterm=bold
+hi StatusLineNC   ctermfg=white ctermbg=black
 hi StatusLine   ctermfg=white ctermbg=darkblue cterm=bold
-hi Folded       cterm=bold ctermfg=darkmagenta
+hi Folded       cterm=bold ctermfg=darkmagenta ctermbg=none
 hi Visual       ctermbg=white ctermfg=yellow
 
 " Specials
@@ -30,16 +30,16 @@ hi Title        ctermfg=white cterm=bold
 hi MatchParen	term=reverse  ctermbg=DarkYellow
 
 " Syntax
-hi Constant     ctermfg=blue cterm=bold
+hi Constant     ctermfg=darkblue
 hi Number       ctermfg=red
 hi Boolean       ctermfg=red
-hi Statement    ctermfg=green cterm=bold
+hi Statement    ctermfg=darkgreen
 hi Identifier   ctermfg=magenta
-hi Function     cterm=bold ctermfg=white 
-hi PreProc      ctermfg=green
-hi Comment      ctermfg=gray
-hi Type         ctermfg=gray cterm=bold
-hi Special      ctermfg=magenta
+hi Function     ctermbg=darkgreen ctermfg=white cterm=bold
+hi PreProc      ctermfg=darkgreen
+hi Comment      ctermfg=darkred
+hi Type         ctermfg=darkgreen
+hi Special      ctermfg=darkmagenta
 hi Error        ctermfg=white ctermbg=red
 
 " Diff

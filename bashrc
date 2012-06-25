@@ -46,7 +46,7 @@ hash vcprompt &> /dev/null
 
 if [ $? -eq 0 ];then
     # haz it
-    PS1='\[\033[00;35m\]$(vcprompt) \[\033[00;32m\]$\[\033[00m\] '
+    PS1='\[\033[01;35m\]$(vcprompt) \[\033[00;32m\]$\[\033[00m\] '
 else
     PS1=' \[\033[00;32m\]$\[\033[00m\] '
 fi

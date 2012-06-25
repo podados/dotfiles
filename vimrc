@@ -7,18 +7,25 @@ set ls=2          	" allways show status line
 set tw=78		" textwidth : 78 chars
 set scrolloff=4     	" keep 3 lines when scrolling
 
+" expandtab  = All tabs will be spaces.
+" softtabstop = How many spaces will a tab take when 'expandtab' is on.
+" smarttab   = delete chunks of spaces like tabs.
+" tabstop    = How many spaces is a tab (visually).
+" shiftwidth = How many spaces will a 'shift' command take.
 set autoindent		" auto indentation
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab 
 
 " folding
 set foldmethod=indent
-set foldnestmax=1
+set foldnestmax=1 " change to 100 (say) to have manual scrolling only
 
 set mouse=v		" allow copy/paste under X
 
 set showmatch 		" verify brace/parenthes/bracket
+set matchpairs+=<:>  " Treat '<','>' as matching braces.
 
 set visualbell t_vb= " disable horrible beep when a command doesn't work
 
@@ -78,10 +85,7 @@ if has("autocmd")
 
 	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 	
-	" numbers of spaces to (auto)indent  | 8 for C
-	" numbers of spaces of tab character | 4 for C++
-	autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab 
-	autocmd FileType c setlocal tabstop=8 shiftwidth=8
+    autocmd BufWinEnter,FileType *,python,javascript set expandtab smarttab tabstop=4 softtabstop=4 shiftwidth=4
 	autocmd FileType python setlocal ts=4 sw=4 sts=4 et textwidth=0 cindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 	let python_no_builtin_highlight=0
 
@@ -94,12 +98,13 @@ if has("autocmd")
 
 	" for both CSS and HTML, use genuine tab characters for indentation,
 	" to make files a few bytes smaller:
-	autocmd FileType html,xhtml,css,scss,xml,xsl,htmldjango setlocal noexpandtab sw=2 ts=2 textwidth=0
-	" Actually, no
-	"autocmd FileType html,xhtml,css,xml,xsl,htmldjango setlocal expandtab sw=2 ts=2 sts=2 textwidth=0
+	"autocmd FileType html,xhtml,css,scss,xml,xsl,htmldjango setlocal noexpandtab sw=2 ts=2 textwidth=0
 
 	au FileType helpfile setlocal nonumber  " no line numbers when viewing help
-	au BufRead,BufNewFile *.html,*.htm set filetype=django
+    au BufWinEnter,FileType htmldjango colorscheme martin_krischik
+	au BufRead,BufNewFile *.html,*.htm,*.xml set filetype=htmldjango
+	au BufRead,BufNewFile *.json set filetype=javascript
+
 	"au BufRead,BufNewFile *.html,*.htm call s:SelectHTML()
 
 	au FileType text setlocal nonumber   " no line numbers when viewing text
