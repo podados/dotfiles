@@ -8,4 +8,6 @@ sh ${HOME}/.fehbg
 
 x-terminal-emulator &
 x-www-browser &
+thunderbird &
+ssh-add
 

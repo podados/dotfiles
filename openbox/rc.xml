@@ -240,6 +240,8 @@
     <keybind key="W-F3">
       <action name="GoToDesktop">
         <to>3</to>
+      </action>
+    </keybind>
     <keybind key="W-F4">
       <action name="GoToDesktop">
         <to>4</to>
@@ -721,7 +723,7 @@
       <desktop>all</desktop>
       <maximized>yes</maximized>
     </application>
-    <application name="Thunderbird" type="normal">
+    <application name="thunderbird" type="normal">
       <desktop>2</desktop>
       <maximized>yes</maximized>
     </application>
