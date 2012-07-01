@@ -1,0 +1,11 @@
+
+# get touchpad device id
+id=$(xinput list | grep 'TouchPad' | sed "s/.*id=\(\w\+\).*/\1/")
+# and disable it
+xinput set-prop $id "Device Enabled" 0
+
+sh ${HOME}/.fehbg
+
+x-terminal-emulator &
+x-www-browser &
+
